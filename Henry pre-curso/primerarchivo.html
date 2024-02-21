@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRIMER PROYECTO</title>
+
+    <!-- configurar las lineas negras para una tabla-->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
 </head>
 <body>
     <header>
@@ -13,8 +21,14 @@
 
    <hr>
    <main>
-
-   <h2>titulo 1 </h2>
+   <div>
+    <!-- identificador de fragmentos (separa en secciones y crea un enlace directo a la seccion con el identificador id)-->
+    <ul>
+    <li><a href="#foto1">ultimo lanzamiento</a> </li> 
+    <li> <a href="#foto2">Indumentaria con %</a></li>   
+    </ul>
+   </div> 
+   <br>
 
    <img src="https://img.freepik.com/foto-gratis/tienda-ropa-tienda-ropa-perchas-tienda-boutique-moderna_1150-8886.jpg?t=st=1708029624~exp=1708030224~hmac=b9c56b35809cfb36e2b3b05dca6cef4f91847294996a30a1fb94bd6b3984df44" alt="">
    <h3>subtitulo</h3>
@@ -27,12 +41,19 @@
 
    <h2>titulo 2</h2>
    <h3>subtitulo</h3>
+
+   <!-- esto es una lista ordenada-->
    <p>esto es una lista ordenada</p>
 
    <ol>
     <li>una cosa</li>
     <li>otra cosa</li>
-    <li>otra cosa</li>
+    <li>otra cosa
+        <ol> <!--esto es una lista anidada a otra-->
+            <li style="list-style-type: lower-alpha;"> una cosa</li>
+            <li> otra cosa</li>
+            <li> otra cosa</li>
+        </ol>
    </ol>
 
    <hr>
@@ -40,6 +61,8 @@
 
    <h2>titulo 3</h2>
    <h3>subtitulo</h3>
+   
+   <!-- esto es una lista desordenada-->
    <p>esto es una lista desordenada</p>
    
    <ul>
@@ -47,6 +70,35 @@
     <li>otra cosa</li>
     <li>otra cosa</li>
    </ul>
+   <br><br>
+
+
+
+   <!-- esto es una tabla-->
+<h1> esto es una tabla</h1>
+
+   <table style="width: 500px;">
+    <thead>
+        <tr>
+            <th>producto</th>
+            <th>precio</th>
+            <th>stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>arroz</td>
+            <td>$19,00</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>manteca</td>
+            <td>$34,00</td>
+            <td>4</td>
+        </tr>
+    </tbody>
+   </table>
+
 
    </main>
    <hr>
@@ -56,35 +108,43 @@
        </footer>
     
        <footer>
-        <a href="https://www.youtube.com/watch?v=2rk4-s5-Hbk">youtube</a>
+        <a target="_blank" href="https://www.youtube.com/watch?v=2rk4-s5-Hbk" title="ir a la pagina">youtube</a>
        </footer>
    </div>
+   <div> 
+   
+   
 
+   
    <hr>
 
    <div>
     <p>FORMULARIO</p>
-    <form>
+    <form action="/formulario" method="POST">
         <div>
-            <input type="text" name="nombre" placeholder="Nombre">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" name="nombre">
         </div>
 
         <div>
             <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido">
+            <input id="apellido" type="text" name="apellido">
         </div>
 
         <div>
             <label for="DNI">DNI:</label>
-            <input type="number" name="DNI"> <br>
+            <input id="DNI" type="number" name="DNI"> <br>
         </div>
 
         <div>
             <label for="telefono">Telefono</label>
-            <input type="number" name="telefono">
+            <input id="telefono" type="number" name="telefono">
         </div>
+        <button type="submit"></button>
 
-        <button>enviar</button>
     </form>
+    
+    <img id="foto1" src="c:\Users\arte\Downloads\istockphoto-1043113314-1024x1024.jpg" alt="">
+    <img id="foto2" src="c:\Users\arte\Downloads\This item is unavailable - Etsy.jfif" alt="">
 </body>
 </html>
